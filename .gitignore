@@ -1,0 +1,49 @@
+# Dependencies
+node_modules
+/jspm_packages
+
+# Testing
+/coverage
+
+# Production
+/build
+/dist
+/out
+.env
+.env.*.local
+.venv
+
+# IDE and other temporary files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# NestJS specific
+/dist
+/test/coverage
+.nestjs-cli.json
+
+# React specific (adjust based on your setup, e.g., create-react-app, Vite, etc.)
+# create-react-app uses 'build'
+# Vite uses 'dist' by default
+/build
+/dist
+/coverage
+# If using TypeScript with React
+*.tsbuildinfo
+
+# Optional: GraphQL schema file (if auto-generated)
+schema.gql
+
+# Optional: Environment specific files that should not be committed (e.g., local configs)
+# Keep the templates though, e.g. .env.example should be tracked
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
