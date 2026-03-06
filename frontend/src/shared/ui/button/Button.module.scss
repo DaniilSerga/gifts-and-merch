@@ -1,0 +1,70 @@
+.button {
+	cursor: pointer;
+
+	position: relative;
+
+	font-family: Montserrat, 'sans-serif' !important;
+
+	color: var(--button-text-primary);
+	border-radius: 60px;
+	padding: 18px 43px;
+	border: none;
+
+	overflow: hidden;
+	transition:
+		background 0.2s,
+		box-shadow 0.3s;
+
+	outline: none;
+
+	@include typography.button();
+
+	&.withShadow {
+		box-shadow: var(--button-default-shadow);
+	}
+
+	&:disabled {
+		background: var(--button-disabled-background) !important;
+	}
+
+	&:not(:disabled):after {
+		content: '';
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+		background: var(--button-active-background);
+		border-radius: inherit;
+
+		opacity: 0;
+		transition: all 0.2s;
+	}
+
+	&:not(:disabled):not(.withShadow):hover {
+		box-shadow: var(--button-hover-shadow);
+	}
+
+	&:not(:disabled):active::after {
+		opacity: 1;
+	}
+
+	&[data-theme='primary'] {
+		background: var(--button-primary-background);
+	}
+
+	&[data-theme='secondary'] {
+		background: var(--button-secondary-background);
+	}
+
+	&[data-theme='tertiary'] {
+		background: var(--button-tertiary-background);
+		color: var(--button-text-secondary);
+	}
+
+	&[data-theme='quaternary'] {
+		background: var(--button-quaternary-background);
+	}
+}

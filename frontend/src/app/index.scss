@@ -1,0 +1,14 @@
+@use '@/shared/styles/fonts' as *;
+
+:root {
+	font-family: Gilroy, sans-serif;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	margin: 0;
+}
